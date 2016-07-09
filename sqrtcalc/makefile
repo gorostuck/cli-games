@@ -6,7 +6,7 @@ INCLUDE := -Ideps/include
 LIBPATH := -L/usr/local/lib64
 LIBS    := 
 
-FLAGS    := -O3 -ffast-math -Wall -fopenmp
+FLAGS    := -O3 -lm -ffast-math -Wall 
 CCFLAGS  := $(FLAGS)
 CXXFLAGS := $(FLAGS) -std=c++11 
 
