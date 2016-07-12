@@ -1,5 +1,5 @@
-/* This file contains the definition of all window managing related stuff */
 #include "window.h"
+
 WINDOW *create_newwin(int height, int width, int starty, int startx)
 {
     WINDOW *local_win;
