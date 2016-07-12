@@ -2,4 +2,4 @@
 A bunch of games with questionable quality and effort put into them.
 
 - SQRTCALC: Approximate the square root of a number. (DONE)
-- NCURSOR : Shoot things in ncursers.
+- NCURSOR : Shoot things in ncurses.
