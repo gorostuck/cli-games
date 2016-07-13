@@ -4,15 +4,17 @@
 #include "window.h"
 
 
+
 int game_start()
 {
-    S_WELCOME = "Hi there! Press any key to start playing!";
+
+    load_constants();
 
     initscr();
     getmaxyx(stdscr, ROWS, COLS);
     cbreak();
 
-    mvprintw(ROWS/2, (COLS-strlen(S_WELCOME))/2, "%s", S_WELCOME);
+    print_in_middle(ROWS, COLS, S_WELCOME);
     move(0,0);
 
     refresh();
@@ -21,3 +23,9 @@ int game_start()
 
     return 0;
 }
+
+void load_constants()
+{
+    S_WELCOME = "Hi there! Press any key to start playing!";
+}
+
