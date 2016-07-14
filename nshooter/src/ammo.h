@@ -1,13 +1,17 @@
 #ifndef AMMO_H_INCLUDED
 #define AMMO_H_INCLUDED
 
-#define MAX_AMMO 10
+#include <ncurses.h>
+
+#define AMMO_SCREEN_ROWS 4
+#define AMMO_SCREEN_COLS 10
 
 WINDOW *ammo_window;
+
+#define MAX_AMMO 10
 
 unsigned int current_ammo;
 
 void init_ammo();
-void render_ammo();
 
 #endif
