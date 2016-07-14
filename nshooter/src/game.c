@@ -28,11 +28,35 @@ int game_start()
 int game_loop()
 {
     getyx(main_window, current_y, current_x);
-    while(move_within_border());
+    while(read_input());
     refresh();
     return 1;
 }
 
+int read_input(int k)
+{
+
+}
+
+void init()
+{
+    load_constants();
+    initscr();
+    cbreak();
+    noecho();
+    getmaxyx(stdscr, ROWS, COLS);
+
+    box(stdscr, 0,0);
+}
+
+void load_constants()
+{
+    S_WELCOME = "Hi there! Press any key to start playing!";
+    S_GAME_START= "*****GAME START*****";
+}
+
+// DUMPSTER
+/*
 int move_within_border()
 {
     int ch = getch();
@@ -66,21 +90,5 @@ int move_within_border()
     }
     return 1;
 }
-
-void init()
-{
-    load_constants();
-    initscr();
-    cbreak();
-    noecho();
-    getmaxyx(stdscr, ROWS, COLS);
-
-    box(stdscr, 0,0);
-}
-
-void load_constants()
-{
-    S_WELCOME = "Hi there! Press any key to start playing!";
-    S_GAME_START= "*****GAME START*****";
-}
+*/
 
