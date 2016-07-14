@@ -35,6 +35,9 @@ src/cmdline.c: src/cmdline.ggo
 
 %.device.o: ../src/%.cu
 	$(NVCC) $(NVCCFLAGS) -c $< -o $@
+
+run:
+	./bin/app
               
 clean:
 	rm -rf obj/*
