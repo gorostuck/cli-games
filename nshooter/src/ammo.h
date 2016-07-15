@@ -8,10 +8,14 @@
 
 WINDOW *ammo_screen;
 
-#define MAX_AMMO 10
+#define MAX_AMMO AMMO_SCREEN_COLS/2
 
-unsigned int current_ammo;
+int current_ammo;
+
+int ammo_screen_starting_y, ammo_screen_starting_x;
 
 void init_ammo();
+
+void render_ammo();
 
 #endif
