@@ -3,11 +3,6 @@
 
 #include "window.h"
 
-#define MAX_Y 20
-#define MAX_X 45
-
-int ROWS, COLS;
-
 int current_y, current_x;
 
 char* S_WELCOME;

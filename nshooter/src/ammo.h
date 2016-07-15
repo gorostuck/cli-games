@@ -6,7 +6,7 @@
 #define AMMO_SCREEN_ROWS 4
 #define AMMO_SCREEN_COLS 10
 
-WINDOW *ammo_window;
+WINDOW *ammo_screen;
 
 #define MAX_AMMO 10
 
