@@ -12,6 +12,7 @@ int game_start()
     print_in_middle(ROWS, COLS, S_WELCOME);
     move(0,0);
     getch();
+    init_main_screen(ROWS, COLS);
     move(ROWS/2, COLS/2);
 
     while (game_loop());
@@ -26,14 +27,14 @@ int game_start()
 int game_loop()
 {
     getyx(main_screen, current_y, current_x);
-    while(read_input());
     refresh();
+    while(read_input(0));
     return 1;
 }
 
 int read_input(int k)
 {
-    return 0;
+    return k;
 }
 
 void init()
@@ -43,7 +44,6 @@ void init()
     cbreak();
     noecho();
     getmaxyx(stdscr, ROWS, COLS);
-    init_main_screen(ROWS, COLS);
     box(stdscr, 0,0);
 }
 
