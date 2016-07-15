@@ -2,23 +2,21 @@
 
 #include <string.h>
 #include "window.h"
+#include "main_screen.h"
 
 
 
 int game_start()
 {
     init();
-
     print_in_middle(ROWS, COLS, S_WELCOME);
     move(0,0);
     getch();
-
-    main_window = window_in_middle(MAX_Y, MAX_X, ROWS, COLS);
     move(ROWS/2, COLS/2);
 
     while (game_loop());
 
-    destroy_win(main_window);
+    destroy_win(main_screen);
 
     endwin();
 
@@ -27,7 +25,7 @@ int game_start()
 
 int game_loop()
 {
-    getyx(main_window, current_y, current_x);
+    getyx(main_screen, current_y, current_x);
     while(read_input());
     refresh();
     return 1;
@@ -35,7 +33,7 @@ int game_loop()
 
 int read_input(int k)
 {
-
+    return 0;
 }
 
 void init()
@@ -45,7 +43,7 @@ void init()
     cbreak();
     noecho();
     getmaxyx(stdscr, ROWS, COLS);
-
+    init_main_screen(ROWS, COLS);
     box(stdscr, 0,0);
 }
 

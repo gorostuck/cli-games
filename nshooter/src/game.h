@@ -1,12 +1,10 @@
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 
-#include <ncurses.h>
+#include "window.h"
 
 #define MAX_Y 20
 #define MAX_X 45
-
-WINDOW *main_window;
 
 int ROWS, COLS;
 

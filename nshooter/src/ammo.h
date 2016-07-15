@@ -1,7 +1,7 @@
 #ifndef AMMO_H_INCLUDED
 #define AMMO_H_INCLUDED
 
-#include <ncurses.h>
+#include "window.h"
 
 #define AMMO_SCREEN_ROWS 4
 #define AMMO_SCREEN_COLS 10
