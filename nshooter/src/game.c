@@ -3,6 +3,7 @@
 #include <string.h>
 #include "window.h"
 #include "main_screen.h"
+#include "ammo.h"
 
 
 
@@ -14,6 +15,7 @@ int game_start()
     init_main_screen(TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
     move(TOTAL_SCREEN_ROWS/2, TOTAL_SCREEN_COLS/2);
 
+    init_ammo();
     while (game_loop());
 
     destroy_win(main_screen);

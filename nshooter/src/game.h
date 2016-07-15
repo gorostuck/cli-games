@@ -1,8 +1,6 @@
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 
-#include "window.h"
-
 int current_y, current_x;
 
 char* S_WELCOME;

@@ -4,7 +4,7 @@
 #include "window.h"
 
 #define AMMO_SCREEN_ROWS 4
-#define AMMO_SCREEN_COLS 10
+#define AMMO_SCREEN_COLS 30
 
 WINDOW *ammo_screen;
 
