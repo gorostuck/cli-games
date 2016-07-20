@@ -1,3 +1,4 @@
+// This file contains the declaration for the main game's process
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 

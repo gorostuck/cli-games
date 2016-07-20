@@ -1,3 +1,4 @@
+// This file contains the definition for the main game's process
 #include "game.h"
 
 #include <string.h>

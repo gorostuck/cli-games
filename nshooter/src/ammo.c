@@ -1,3 +1,4 @@
+// This file contains the definition for the ammo component
 #include "ammo.h"
 #include "main_screen.h"
 
@@ -20,8 +21,6 @@ void render_ammo()
     {
         for (int e=0; e <= AMMO_SCREEN_ROWS; ++e)
         {
-            
         }
     }
-    
 }

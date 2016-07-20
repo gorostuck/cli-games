@@ -1,3 +1,4 @@
+// This file contains the declaration for the ammo component
 #ifndef AMMO_H_INCLUDED
 #define AMMO_H_INCLUDED
 

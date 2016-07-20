@@ -1,3 +1,4 @@
+// This file contains the declaration for the window component of the game
 #ifndef WINDOW_H_INCLUDED
 #define WINDOW_H_INCLUDED
 

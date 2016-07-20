@@ -1,3 +1,4 @@
+// This file contains the definitions for the main screen
 #ifndef MAIN_SCREEN_H_INCLUDED
 #define MAIN_SCREEN_H_INCLUDED
 

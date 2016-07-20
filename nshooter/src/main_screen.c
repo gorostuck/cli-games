@@ -1,3 +1,4 @@
+// This file contains the declarations for the main screen
 #include "main_screen.h"
 
 void init_main_screen(int ROWS, int COLS)
