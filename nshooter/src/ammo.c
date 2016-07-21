@@ -22,9 +22,22 @@ void render_ammo()
       for (int e=0; e < AMMO_SCREEN_ROWS; ++e, ++cursor_y)
         {
           move(cursor_y, cursor_x);
-          if (e==0) printw("^ ");
-          else printw("# ");
+          if (i >= current_ammo)
+            printw("  ");
+          else {
+            if (e==0) printw("^ ");
+            else printw("# ");
+          }
         }
       cursor_y=ammo_screen_starting_y;
     }
+}
+
+int try_shoot()
+{
+  if (current_ammo > 0)
+    {
+      current_ammo -=1;
+      return 1;
+    } else return 0;
 }

@@ -6,8 +6,6 @@
 #include "main_screen.h"
 #include "ammo.h"
 
-
-
 int game_start()
 {
     init();
@@ -29,14 +27,17 @@ int game_start()
 int game_loop()
 {
     getyx(main_screen, current_y, current_x);
+    getch();
+    try_shoot();
+    render_ammo();
     refresh();
-    while(read_input(0));
     return 1;
 }
 
 int read_input(int k)
 {
-    return k;
+  try_shoot();
+  return k;
 }
 
 void init()
