@@ -28,7 +28,7 @@ int game_loop()
 {
     getyx(main_screen, current_y, current_x);
     getch();
-    try_shoot();
+    if (try_shoot()==0) return 0;
     render_ammo();
     refresh();
     return 1;
