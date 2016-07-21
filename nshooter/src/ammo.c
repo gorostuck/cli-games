@@ -17,10 +17,14 @@ void init_ammo()
 void render_ammo()
 {
     int cursor_y = ammo_screen_starting_y, cursor_x = ammo_screen_starting_x;
-    for (int i=0; i < MAX_AMMO; ++i)
+    for (int i=0; i < MAX_AMMO; ++i, cursor_x +=2)
     {
-        for (int e=0; e <= AMMO_SCREEN_ROWS; ++e)
+      for (int e=0; e < AMMO_SCREEN_ROWS; ++e, ++cursor_y)
         {
+          move(cursor_y, cursor_x);
+          if (e==0) printw("^ ");
+          else printw("# ");
         }
+      cursor_y=ammo_screen_starting_y;
     }
 }
