@@ -23,18 +23,21 @@ int game_start()
 int game_loop()
 {
     getyx(main_screen, current_y, current_x);
-    getch();
-    if (try_shoot()==0) return 0;
+    if (read_input(getch())==0) return 0;
     render_ammo();
-    move(Y_CENTER, X_CENTER);
     refresh();
     return 1;
 }
 
 int read_input(int k)
 {
-  try_shoot();
-  return k;
+  if (k==KEY_SPACE)
+    {
+      if (try_shoot()==0)
+        return 0;
+      return 1;
+    }
+  return 1;
 }
 
 void init()

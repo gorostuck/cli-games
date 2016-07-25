@@ -2,6 +2,8 @@
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 
+#define KEY_SPACE (int)' '
+
 int current_y, current_x;
 
 char* S_WELCOME;
