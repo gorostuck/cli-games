@@ -8,52 +8,53 @@
 
 int game_start()
 {
-    init();
-    move(0,0);
-    getch();
-    init_main_screen(TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
-    init_ammo();
-    move(Y_CENTER, X_CENTER);
-    while (game_loop());
-    destroy_win(main_screen);
-    endwin();
-    return 0;
+  .
+  init();
+  move(0,0);
+  getch();
+  init_main_screen(TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
+  init_ammo();
+  move(Y_CENTER, X_CENTER);
+  while (game_loop());
+  destroy_win(main_screen);
+  endwin();
+  return 0;
 }
 
 int game_loop()
 {
-    getyx(main_screen, current_y, current_x);
-    if (read_input(getch())==0) return 0;
-    render_ammo();
-    refresh();
-    return 1;
+  getyx(main_screen, current_y, current_x);
+  if (read_input(getch())==0) return 0;
+  render_ammo();
+  refresh();
+  return 1;
 }
 
 int read_input(int k)
 {
   if (k==KEY_SPACE)
-    {
-      if (try_shoot()==0)
-        return 0;
-      return 1;
-    }
+  {
+    if (try_shoot()==0)
+      return 0;
+    return 1;
+  }
   return 1;
 }
 
 void init()
 {
-    load_constants();
-    initscr();
-    cbreak();
-    noecho();
-    getmaxyx(stdscr, TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
-    box(stdscr, 0,0);
+  load_constants();
+  initscr();
+  cbreak();
+  noecho();
+  getmaxyx(stdscr, TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
+  box(stdscr, 0,0);
 }
 
 void load_constants()
 {
-    S_WELCOME = "Hi there! Press any key to start playing!";
-    S_GAME_START= "*****GAME START*****";
+  S_WELCOME = "Hi there! Press any key to start playing!";
+  S_GAME_START= "*****GAME START*****";
 }
 
 // DUMPSTER
