@@ -60,32 +60,34 @@ void load_constants()
 
 int move_within_borders(int k)
 {
-    switch(k)
-    {
-        case KEY_UP:
-            if (current_y < MAIN_SCREEN_ROWS){
-                move(++current_y, current_x);
-                return 0;
-            }
-            break;
-        case KEY_LEFT:
-            if (current_x > 0){
-                move(current_y, ++current_x);
-                return 0;
-            }
-            break;
-        case KEY_DOWN:
-            if (current_x < MAIN_SCREEN_COLS){
-                move(--current_y, current_x);
-                return 0;
-            }
-            break;
-        case KEY_RIGHT:
-            if (current_y > 0){
-                move(current_y, current_x++);
-            }
-        default:
-            break;
-    }
-    return 1;
+  switch(k)
+  {
+    case KEY_UP:
+      if (current_y < MAIN_SCREEN_ROWS){
+        move(++current_y, current_x);
+        return 0;
+      }
+    break;
+    case KEY_LEFT:
+      if (current_x > 0){
+        move(current_y, ++current_x);
+        return 0;
+      }
+    break;
+    case KEY_DOWN:
+      if (current_x < MAIN_SCREEN_COLS){
+        move(--current_y, current_x);
+        return 0;
+      }
+      break;
+      case KEY_RIGHT:
+        if (current_y > 0){
+          move(current_y, current_x++);
+          return 0;
+        }
+      break;
+      default:
+          break;
+  }
+  return 1;
 }
