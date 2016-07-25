@@ -12,15 +12,11 @@ int game_start()
     move(0,0);
     getch();
     init_main_screen(TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
-    move(TOTAL_SCREEN_ROWS/2, TOTAL_SCREEN_COLS/2);
-
     init_ammo();
+    move(Y_CENTER, X_CENTER);
     while (game_loop());
-
     destroy_win(main_screen);
-
     endwin();
-
     return 0;
 }
 
@@ -30,6 +26,7 @@ int game_loop()
     getch();
     if (try_shoot()==0) return 0;
     render_ammo();
+    move(Y_CENTER, X_CENTER);
     refresh();
     return 1;
 }
