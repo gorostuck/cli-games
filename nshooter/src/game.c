@@ -61,30 +61,34 @@ void load_constants()
 
 int move_within_borders(int k)
 {
+  move(0,0);
+  printw("%d, %d", current_y, current_x);
+  move(current_y, current_x);
   switch(k)
   {
   case KEY_W:
-    if (current_y < TOTAL_SCREEN_ROWS - MAIN_SCREEN_ROWS)
+    if (current_y > (TOTAL_SCREEN_ROWS + MAIN_SCREEN_ROWS))
       {
         move(--current_y, current_x);
         return 0;
       }
     break;
   case KEY_D:
+    if (current_x < (TOTAL_SCREEN_COLS - MAIN_SCREEN_COLS))
       {
         move(current_y, ++current_x);
         return 0;
       }
     break;
   case KEY_S:
-      if (current_x > MAIN_SCREEN_COLS)
+    if (current_y < (TOTAL_SCREEN_COLS + MAIN_SCREEN_COLS/2))
       {
         move(++current_y, current_x);
         return 0;
       }
      break;
   case KEY_A:
-        if (current_y > 0)
+    if (current_x > (TOTAL_SCREEN_COLS - MAIN_SCREEN_COLS/2))
         {
           move(current_y, --current_x);
           return 0;
