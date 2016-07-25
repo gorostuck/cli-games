@@ -22,7 +22,7 @@ int game_start()
 
 int game_loop()
 {
-  getyx(main_screen, current_y, current_x);
+  getyx(stdscr, current_y, current_x);
   if (read_input(getch())==0) return 0;
   render_ammo();
   refresh();
@@ -43,6 +43,7 @@ int read_input(int k)
 
 void init()
 {
+  keypad(stdscr, TRUE);
   load_constants();
   initscr();
   cbreak();
@@ -62,31 +63,34 @@ int move_within_borders(int k)
 {
   switch(k)
   {
-    case KEY_W:
-      if (current_y < MAIN_SCREEN_ROWS){
-        move(++current_y, current_x);
+  case KEY_W:
+    if (current_y < MAIN_SCREEN_ROWS)
+      {
+        move(--current_y, current_x);
         return 0;
       }
     break;
-    case KEY_D:
-      if (current_x > 0){
+  case KEY_D:
+      {
         move(current_y, ++current_x);
         return 0;
       }
     break;
-    case KEY_S:
-      if (current_x < MAIN_SCREEN_COLS){
-        move(--current_y, current_x);
+  case KEY_S:
+      if (current_x > MAIN_SCREEN_COLS)
+      {
+        move(++current_y, current_x);
         return 0;
       }
-      break;
-      case KEY_a:
-        if (current_y > 0){
-          move(current_y, current_x++);
+     break;
+  case KEY_A:
+        if (current_y > 0)
+        {
+          move(current_y, --current_x);
           return 0;
         }
       break;
-      default:
+   default:
           break;
   }
   return 1;

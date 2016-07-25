@@ -4,10 +4,10 @@
 
 #define KEY_SHOOT (int)' '
 
-#define KEY_UP    (int)'w'
-#define KEY_DOWN  (int)'s'
-#define KEY_LEFT  (int)'a'
-#define KEY_RIGHT (int)'d'
+#define KEY_W  (int)'w'
+#define KEY_S  (int)'s'
+#define KEY_A  (int)'a'
+#define KEY_D  (int)'d'
 
 int current_y, current_x;
 
