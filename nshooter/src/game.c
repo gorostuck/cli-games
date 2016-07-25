@@ -64,7 +64,7 @@ int move_within_borders(int k)
   switch(k)
   {
   case KEY_W:
-    if (current_y < MAIN_SCREEN_ROWS)
+    if (current_y < TOTAL_SCREEN_ROWS - MAIN_SCREEN_ROWS)
       {
         move(--current_y, current_x);
         return 0;
