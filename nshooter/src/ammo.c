@@ -16,6 +16,8 @@ void init_ammo()
 
 void render_ammo()
 {
+  int current_y, current_x;
+  getyx(stdscr, current_y, current_x);
     int cursor_y = ammo_screen_starting_y, cursor_x = ammo_screen_starting_x;
     for (int i=0; i < MAX_AMMO; ++i, cursor_x +=2)
     {
@@ -31,6 +33,7 @@ void render_ammo()
         }
       cursor_y=ammo_screen_starting_y;
     }
+    move(current_y, current_x);
 }
 
 int try_shoot()
