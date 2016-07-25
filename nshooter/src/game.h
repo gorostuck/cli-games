@@ -2,7 +2,12 @@
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 
-#define KEY_SPACE (int)' '
+#define KEY_SHOOT (int)' '
+
+#define KEY_UP    (int)'w'
+#define KEY_DOWN  (int)'s'
+#define KEY_LEFT  (int)'a'
+#define KEY_RIGHT (int)'d'
 
 int current_y, current_x;
 

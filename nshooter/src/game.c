@@ -31,7 +31,7 @@ int game_loop()
 
 int read_input(int k)
 {
-  if (k==KEY_SPACE)
+  if (k==KEY_SHOOT)
   {
     if (try_shoot()==0)
       return 0;
@@ -62,25 +62,25 @@ int move_within_borders(int k)
 {
   switch(k)
   {
-    case KEY_UP:
+    case KEY_W:
       if (current_y < MAIN_SCREEN_ROWS){
         move(++current_y, current_x);
         return 0;
       }
     break;
-    case KEY_LEFT:
+    case KEY_D:
       if (current_x > 0){
         move(current_y, ++current_x);
         return 0;
       }
     break;
-    case KEY_DOWN:
+    case KEY_S:
       if (current_x < MAIN_SCREEN_COLS){
         move(--current_y, current_x);
         return 0;
       }
       break;
-      case KEY_RIGHT:
+      case KEY_a:
         if (current_y > 0){
           move(current_y, current_x++);
           return 0;
