@@ -1,4 +1,7 @@
 // This file contains the declaration for the main game's process
+
+#define DEBUG_MODE
+
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 
@@ -21,4 +24,8 @@ int move_within_borders();
 void init();
 void load_constants();
 
-#endif
+#ifdef DEBUG_MODE
+void print_debug_stuff();
+#endif // DEBUG_MODE
+
+#endif // GAME_H_INCLUDED

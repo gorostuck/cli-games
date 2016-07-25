@@ -48,6 +48,11 @@ void init()
   initscr();
   cbreak();
   noecho();
+
+  #ifdef DEBUG_MODE
+  print_debug_stuff();
+#endif // DEBUG_MODE
+
   getmaxyx(stdscr, TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
   box(stdscr, 0,0);
 }
@@ -61,9 +66,13 @@ void load_constants()
 
 int move_within_borders(int k)
 {
+
+#ifdef DEBUG_MODE
   move(0,0);
   printw("%d, %d", current_y, current_x);
   move(current_y, current_x);
+#endif // DEBUG_MODE
+
   switch(k)
   {
   case KEY_W:
@@ -81,7 +90,7 @@ int move_within_borders(int k)
       }
     break;
   case KEY_S:
-    if (current_y < (TOTAL_SCREEN_COLS + MAIN_SCREEN_COLS/2))
+    if (current_y < (TOTAL_SCREEN_ROWS - MAIN_SCREEN_ROWS))
       {
         move(++current_y, current_x);
         return 0;
@@ -99,3 +108,24 @@ int move_within_borders(int k)
   }
   return 1;
 }
+
+
+#ifdef DEBUG_MODE
+void print_debug_stuff()
+{
+  move(1,1);
+  printw("TOTAL_SCREEN_ROWS: %d", TOTAL_SCREEN_ROWS);
+  move(2,1);
+  printw("TOTAL_SCREEN_ROWS: %d", TOTAL_SCREEN_ROWS);
+  move(3,1);
+  printw("MAIN_SCREEN_ROWS: %d", MAIN_SCREEN_ROWS);
+  move(4,1);
+  printw("MAIN_SCREEN_COLS: %d", MAIN_SCREEN_COLS);
+  move(5,1);
+  printw("AMMO_SCREEN_COLS: %d", AMMO_SCREEN_COLS);
+  move(6,1);
+  printw("AMMO_SCREEN_COLS: %d", AMMO_SCREEN_COLS);
+
+
+}
+#endif // DEBUG_MODE
