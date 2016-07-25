@@ -12,6 +12,7 @@ char* S_GAME_START;
 int game_start();
 int game_loop();
 int read_input();
+int move_within_borders();
 void init();
 void load_constants();
 

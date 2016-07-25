@@ -4,7 +4,6 @@
 
 void init_ammo()
 {
-  .
   current_ammo = MAX_AMMO;
 
   ammo_screen_starting_y = TOTAL_SCREEN_ROWS/2 + MAIN_SCREEN_ROWS/2;

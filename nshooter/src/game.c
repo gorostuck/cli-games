@@ -8,7 +8,6 @@
 
 int game_start()
 {
-  .
   init();
   move(0,0);
   getch();
@@ -38,6 +37,7 @@ int read_input(int k)
       return 0;
     return 1;
   }
+  move_within_borders(k);
   return 1;
 }
 
@@ -57,16 +57,13 @@ void load_constants()
   S_GAME_START= "*****GAME START*****";
 }
 
-// DUMPSTER
-/*
-int move_within_border()
+
+int move_within_borders(int k)
 {
-    int ch = getch();
-    switch(ch)
+    switch(k)
     {
         case KEY_UP:
-            printw("%d", current_y);
-            if (current_y < MAX_Y){
+            if (current_y < MAIN_SCREEN_ROWS){
                 move(++current_y, current_x);
                 return 0;
             }
@@ -78,7 +75,7 @@ int move_within_border()
             }
             break;
         case KEY_DOWN:
-            if (current_x < MAX_X){
+            if (current_x < MAIN_SCREEN_COLS){
                 move(--current_y, current_x);
                 return 0;
             }
@@ -92,5 +89,3 @@ int move_within_border()
     }
     return 1;
 }
-*/
-
