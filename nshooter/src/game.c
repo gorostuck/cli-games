@@ -48,14 +48,13 @@ void init()
   initscr();
   cbreak();
   noecho();
-
-  #ifdef DEBUG_MODE
-  print_debug_stuff();
-#endif // DEBUG_MODE
-
   getmaxyx(stdscr, TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
   box(stdscr, 0,0);
-}
+
+#ifdef DEBUG_MODE
+  print_debug_stuff();
+#endif // DEBUG_MODE
+  }
 
 void load_constants()
 {
@@ -76,28 +75,28 @@ int move_within_borders(int k)
   switch(k)
   {
   case KEY_W:
-    if (current_y > (TOTAL_SCREEN_ROWS + MAIN_SCREEN_ROWS))
+    //if (current_y > (TOTAL_SCREEN_ROWS + MAIN_SCREEN_ROWS))
       {
         move(--current_y, current_x);
         return 0;
       }
     break;
   case KEY_D:
-    if (current_x < (TOTAL_SCREEN_COLS - MAIN_SCREEN_COLS))
+    //if (current_x < (TOTAL_SCREEN_COLS - MAIN_SCREEN_COLS))
       {
         move(current_y, ++current_x);
         return 0;
       }
     break;
   case KEY_S:
-    if (current_y < (TOTAL_SCREEN_ROWS - MAIN_SCREEN_ROWS))
+    //if (current_y < (TOTAL_SCREEN_ROWS - MAIN_SCREEN_ROWS))
       {
         move(++current_y, current_x);
         return 0;
       }
      break;
   case KEY_A:
-    if (current_x > (TOTAL_SCREEN_COLS - MAIN_SCREEN_COLS/2))
+    //if (current_x > (TOTAL_SCREEN_COLS - MAIN_SCREEN_COLS/2))
         {
           move(current_y, --current_x);
           return 0;
@@ -116,16 +115,14 @@ void print_debug_stuff()
   move(1,1);
   printw("TOTAL_SCREEN_ROWS: %d", TOTAL_SCREEN_ROWS);
   move(2,1);
-  printw("TOTAL_SCREEN_ROWS: %d", TOTAL_SCREEN_ROWS);
+  printw("TOTAL_SCREEN_COLS: %d", TOTAL_SCREEN_COLS);
   move(3,1);
   printw("MAIN_SCREEN_ROWS: %d", MAIN_SCREEN_ROWS);
   move(4,1);
   printw("MAIN_SCREEN_COLS: %d", MAIN_SCREEN_COLS);
   move(5,1);
-  printw("AMMO_SCREEN_COLS: %d", AMMO_SCREEN_COLS);
+  printw("AMMO_SCREEN_ROWS: %d", AMMO_SCREEN_ROWS);
   move(6,1);
   printw("AMMO_SCREEN_COLS: %d", AMMO_SCREEN_COLS);
-
-
 }
 #endif // DEBUG_MODE
