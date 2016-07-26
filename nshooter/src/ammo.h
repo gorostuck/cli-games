@@ -18,4 +18,4 @@ void init_ammo();
 void render_ammo();
 int try_shoot();
 
-#endif
+#endif // AMMO_H_INCLUDED

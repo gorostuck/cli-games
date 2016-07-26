@@ -1,16 +1,15 @@
 // This file contains the declaration for the main game's process
 
-#define DEBUG_MODE
 
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 
 #define KEY_SHOOT (int)' '
 
-#define KEY_W  (int)'w'
-#define KEY_S  (int)'s'
-#define KEY_A  (int)'a'
-#define KEY_D  (int)'d'
+#define KEY_K  (int)'k'
+#define KEY_J  (int)'j'
+#define KEY_H  (int)'h'
+#define KEY_L  (int)'l'
 
 int current_y, current_x;
 

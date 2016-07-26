@@ -74,28 +74,28 @@ int move_within_borders(int k)
 
   switch(k)
   {
-  case KEY_W:
+  case KEY_K:
     if (current_y > (TOTAL_SCREEN_ROWS/2 - MAIN_SCREEN_ROWS/2))
       {
         move(--current_y, current_x);
         return 0;
       }
     break;
-  case KEY_D:
+  case KEY_L:
     if (current_x < (TOTAL_SCREEN_COLS/2 + MAIN_SCREEN_COLS/2))
       {
         move(current_y, ++current_x);
         return 0;
       }
     break;
-  case KEY_S:
+  case KEY_J:
     if (current_y < (TOTAL_SCREEN_ROWS/2 + MAIN_SCREEN_ROWS/2)-1)
       {
         move(++current_y, current_x);
         return 0;
       }
      break;
-  case KEY_A:
+  case KEY_H:
     if (current_x > (TOTAL_SCREEN_COLS/2 - MAIN_SCREEN_COLS/2))
         {
           move(current_y, --current_x);
