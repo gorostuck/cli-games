@@ -5,6 +5,7 @@
 #include "window.h"
 #include "main_screen.h"
 #include "ammo.h"
+#include "gameplay.h"
 
 int game_start()
 {
@@ -29,17 +30,6 @@ int game_loop()
   return 1;
 }
 
-int read_input(int k)
-{
-  if (k==KEY_SHOOT)
-  {
-    if (try_shoot()==0)
-      return 0;
-    return 1;
-  }
-  move_within_borders(k);
-  return 1;
-}
 
 void init()
 {
@@ -63,50 +53,39 @@ void load_constants()
 }
 
 
-int move_within_borders(int k)
+int read_input(int k)
 {
-
-#ifdef DEBUG_MODE
-  move(0,0);
-  printw("%d, %d", current_y, current_x);
-  move(current_y, current_x);
-#endif // DEBUG_MODE
-
-  switch(k)
-  {
-  case KEY_K:
-    if (current_y > (TOTAL_SCREEN_ROWS/2 - MAIN_SCREEN_ROWS/2))
-      {
-        move(--current_y, current_x);
+  if (k==KEY_SHOOT)
+    {
+      if (try_shoot()==0)
         return 0;
-      }
-    break;
-  case KEY_L:
-    if (current_x < (TOTAL_SCREEN_COLS/2 + MAIN_SCREEN_COLS/2))
-      {
-        move(current_y, ++current_x);
-        return 0;
-      }
-    break;
-  case KEY_J:
-    if (current_y < (TOTAL_SCREEN_ROWS/2 + MAIN_SCREEN_ROWS/2)-1)
-      {
-        move(++current_y, current_x);
-        return 0;
-      }
-     break;
-  case KEY_H:
-    if (current_x > (TOTAL_SCREEN_COLS/2 - MAIN_SCREEN_COLS/2))
-        {
-          move(current_y, --current_x);
-          return 0;
-        }
-      break;
-   default:
-          break;
-  }
+      return 1;
+    }
+  move_cursor(k);
   return 1;
 }
+
+void move_cursor(int direction)
+{
+  switch(move_within_borders(direction, current_x, current_y))
+    {
+    case UP:
+      move(--current_y, current_x);
+      return;
+    case RIGHT:
+      move(current_y, ++current_x);
+      return;
+    case DOWN:
+      move(++current_y, current_x);
+      return;
+    case LEFT:
+      move(current_y, --current_x);
+      return;
+    case NONE:
+      return;
+    }
+}
+
 
 
 #ifdef DEBUG_MODE
@@ -126,3 +105,51 @@ void print_debug_stuff()
   printw("AMMO_SCREEN_COLS: %d", AMMO_SCREEN_COLS);
 }
 #endif // DEBUG_MODE
+
+// THAT'S TRASH
+/*
+int move_within_borders(int k)
+{
+
+#ifdef DEBUG_MODE
+  move(0,0);
+  printw("%d, %d", current_y, current_x);
+  move(current_y, current_x);
+#endif // DEBUG_MODE
+
+  switch(move_within_bo)
+    {
+    case KEY_K:
+      if (current_y > (TOTAL_SCREEN_ROWS/2 - MAIN_SCREEN_ROWS/2))
+        {
+          move(--current_y, current_x);
+          return 0;
+        }
+      break;
+    case KEY_L:
+      if (current_x < (TOTAL_SCREEN_COLS/2 + MAIN_SCREEN_COLS/2))
+        {
+          move(current_y, ++current_x);
+          return 0;
+        }
+      break;
+    case KEY_J:
+      if (current_y < (TOTAL_SCREEN_ROWS/2 + MAIN_SCREEN_ROWS/2)-1)
+        {
+          move(++current_y, current_x);
+          return 0;
+        }
+      break;
+    case KEY_A:
+      if (current_x > (TOTAL_SCREEN_COLS/2 - MAIN_SCREEN_COLS/2))
+        {
+          move(current_y, --current_x);
+          return 0;
+        }
+      break;
+    default:
+      break;
+    }
+  return 1;
+}
+*/

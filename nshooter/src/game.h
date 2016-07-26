@@ -4,12 +4,7 @@
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 
-#define KEY_SHOOT (int)' '
 
-#define KEY_K  (int)'k'
-#define KEY_J  (int)'j'
-#define KEY_H  (int)'h'
-#define KEY_L  (int)'l'
 
 int current_y, current_x;
 
@@ -19,7 +14,7 @@ char* S_GAME_START;
 int game_start();
 int game_loop();
 int read_input();
-int move_within_borders();
+void move_cursor(int direction);
 void init();
 void load_constants();
 
