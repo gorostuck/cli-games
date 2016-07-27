@@ -4,12 +4,7 @@
 
 #include "window.h"
 
-#define AMMO_SCREEN_ROWS 4
-#define AMMO_SCREEN_COLS 30
-
 WINDOW *ammo_screen;
-
-#define MAX_AMMO AMMO_SCREEN_COLS/2
 
 int current_ammo;
 int ammo_screen_starting_y, ammo_screen_starting_x;

@@ -2,6 +2,8 @@
 #include "game.h"
 
 #include <string.h>
+
+#include "constants.h"
 #include "window.h"
 #include "main_screen.h"
 #include "ammo.h"
@@ -55,7 +57,7 @@ void load_constants()
 
 int read_input(int k)
 {
-  if (k==KEY_SHOOT)
+  if (k==KEY_SPACE)
     {
       if (try_shoot()==0)
         return 0;

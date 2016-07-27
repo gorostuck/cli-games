@@ -1,6 +1,7 @@
 // This file contains the definition for the gameplay actions component
 #include "gameplay.h"
 
+#include "constants.h"
 #include "ammo.h"
 #include "main_screen.h"
 #include "window.h"
