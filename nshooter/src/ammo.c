@@ -37,12 +37,3 @@ void render_ammo()
   }
   move(current_y, current_x);
 }
-
-int try_shoot()
-{
-  if (current_ammo > 0)
-  {
-    current_ammo -=1;
-    return 1;
-  } else return 0;
-}

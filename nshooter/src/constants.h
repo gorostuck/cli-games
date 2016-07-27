@@ -20,6 +20,8 @@
 #define KEY_H     (int)'h'
 #define KEY_L     (int)'l'
 
+#define KEY_I     (int)'i'
+
 /* MAIN_SCREEN */
 #define MAIN_SCREEN_ROWS 20
 #define MAIN_SCREEN_COLS 45
@@ -27,6 +29,10 @@
 /* AMMO */
 #define AMMO_SCREEN_ROWS 4
 #define AMMO_SCREEN_COLS 30
+
+/* SHOOT */
+#define SHOOT_NO_AMMO 0
+#define SHOOT_OK      1
 
 #define MAX_AMMO AMMO_SCREEN_COLS/2
 
