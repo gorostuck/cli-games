@@ -67,6 +67,11 @@ int read_input(int k)
 
 void move_cursor(int direction)
 {
+  #ifdef DEBUG_MODE
+  move(0,0);
+  printw("(%d, %d)", current_y, current_x);
+  move(current_y, current_x);
+#endif //DEBUG_MODE
   switch(move_within_borders(direction, current_x, current_y))
     {
     case UP:

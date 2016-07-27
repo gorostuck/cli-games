@@ -10,19 +10,19 @@ int move_within_borders(int KEY, int y, int x )
   switch(KEY)
     {
     case KEY_K:
-      if (y > (TOTAL_SCREEN_ROWS/2 - MAIN_SCREEN_ROWS/2))
+      if (x > (TOTAL_SCREEN_ROWS/2 - MAIN_SCREEN_ROWS/2))
         return UP;
       break;
     case KEY_L:
-      if (x < (TOTAL_SCREEN_COLS/2 + MAIN_SCREEN_COLS/2))
+      if (y < (TOTAL_SCREEN_COLS/2 + MAIN_SCREEN_COLS/2))
         return RIGHT;
       break;
     case KEY_J:
-      if (y < (TOTAL_SCREEN_ROWS/2 + MAIN_SCREEN_ROWS/2)-1)
+      if (x < (TOTAL_SCREEN_ROWS/2 + MAIN_SCREEN_ROWS/2)-1)
         return DOWN;
       break;
     case KEY_H:
-      if (x > (TOTAL_SCREEN_COLS/2 - MAIN_SCREEN_COLS/2))
+      if (y > (TOTAL_SCREEN_COLS/2 - MAIN_SCREEN_COLS/2))
         return LEFT;
       break;
    default:
