@@ -3,6 +3,6 @@
 #define GAMEPLAY_H_INCLUDED
 
 int move_within_borders(int KEY, int y, int x);
-int shoot();
+int shoot(int y, int x);
 
 #endif // GAMEPLAY_H_INCLUDED

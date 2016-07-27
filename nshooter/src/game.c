@@ -57,13 +57,11 @@ void load_constants()
 
 int read_input(int k)
 {
-  if (k==KEY_SPACE)
-    {
-      if (try_shoot()==0)
-        return 0;
+  if (k==KEY_SPACE) {
+    if (shoot(current_y, current_x)!=SHOOT_OK)
       return 1;
-    }
-  move_cursor(k);
+  }
+  else move_cursor(k);
   return 1;
 }
 

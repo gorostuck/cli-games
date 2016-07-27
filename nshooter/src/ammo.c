@@ -37,3 +37,9 @@ void render_ammo()
   }
   move(current_y, current_x);
 }
+
+void substract_ammo()
+{
+  --current_ammo;
+  render_ammo();
+}

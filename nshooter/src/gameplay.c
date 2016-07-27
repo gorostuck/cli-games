@@ -31,3 +31,15 @@ int move_within_borders(int KEY, int y, int x )
     }
   return NONE;
 }
+
+// TODO: Make it so cursor is returned to its original position
+int shoot(int y, int x)
+{
+  char status = (char)mvgetch(y, x);
+  if (current_ammo==0||status==STATUS_SHOOTED){
+    return SHOOT_FAIL;
+  }
+  substract_ammo();
+  printw("%c", (char)STATUS_SHOOTED);
+  return SHOOT_OK;
+}

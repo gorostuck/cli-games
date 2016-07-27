@@ -29,12 +29,16 @@
 /* AMMO */
 #define AMMO_SCREEN_ROWS 4
 #define AMMO_SCREEN_COLS 30
+#define MAX_AMMO AMMO_SCREEN_COLS/2
+
 
 /* SHOOT */
-#define SHOOT_NO_AMMO 0
-#define SHOOT_OK      1
+#define SHOOT_FAIL 0
+#define SHOOT_OK   0
 
-#define MAX_AMMO AMMO_SCREEN_COLS/2
+#define STATUS_NONE    (int)' '
+#define STATUS_SHOOTED (int)'x'
+
 
 
 #endif //CONSTANTS_H_DEFINED
