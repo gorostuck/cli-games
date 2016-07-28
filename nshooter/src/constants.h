@@ -37,13 +37,16 @@
 #define AMMO_SCREEN_COLS 30
 #define MAX_AMMO AMMO_SCREEN_COLS/2
 
-
 /* SHOOT */
 #define SHOOT_FAIL 0
 #define SHOOT_OK   0
 
 #define STATUS_NONE    (int)' '
 #define STATUS_SHOOTED (int)'x'
+
+/* STRINGS */
+#define S_WELCOME "Hi tehre! Press any key to start playing"
+#define S_GAME_START "*****GAME START*****"
 
 
 

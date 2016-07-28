@@ -37,7 +37,6 @@ int game_loop()
 void init()
 {
   keypad(stdscr, TRUE);
-  load_constants();
   initscr();
   cbreak();
   noecho();
@@ -47,14 +46,7 @@ void init()
 #ifdef DEBUG_MODE
   print_debug_stuff();
 #endif // DEBUG_MODE
-  }
-
-void load_constants()
-{
-  S_WELCOME = "Hi there! Press any key to start playing!";
-  S_GAME_START= "*****GAME START*****";
 }
-
 
 int read_input(int k)
 {
