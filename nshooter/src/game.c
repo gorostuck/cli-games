@@ -51,8 +51,8 @@ void init()
 int read_input(int k)
 {
   if (k==KEY_SPACE) {
-    if (shoot(cursor_vec2())!=SHOOT_OK)
-      return 0;
+    if (shoot(cursor_vec2())==SHOOT_FAIL)
+      return 1;
   }
   else move_cursor(k);
   return 1;
@@ -64,7 +64,7 @@ void move_cursor(int direction)
   move(0,0);
   printw("(%d, %d)", current_y, current_x);
   move(current_y, current_x);
-#endif //DEBUG_MODE
+#endif /* DEBUG_MODE */
   switch(move_within_borders(direction))
     {
     case DIR_UP:

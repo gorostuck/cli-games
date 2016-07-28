@@ -2,7 +2,7 @@
 #ifndef AMMO_H_INCLUDED
 #define AMMO_H_INCLUDED
 
-#include "window.h"
+#include "ncurses.h"
 
 WINDOW *ammo_screen;
 
