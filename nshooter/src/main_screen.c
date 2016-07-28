@@ -27,5 +27,8 @@ int check_border(int border, vec2 pos)
     if (pos.x < (TOTAL_SCREEN_COLS/2 - MAIN_SCREEN_COLS/2))
       return TRUE;
     break;
+  default:
+    return FALSE;
   }
+  return FALSE;
 }
