@@ -32,3 +32,11 @@ int check_border(int border, vec2 pos)
   }
   return FALSE;
 }
+
+int check_all_bordes(vec2 pos)
+{
+  if (check_border(BORDER_TOP, pos) && check_border(BORDER_LEFT, pos) &&
+      check_border(BORDER_RIGHT, pos) && check_border(BORDER_BOTTOM, pos))
+    return TRUE;
+  else return FALSE;
+}

@@ -9,5 +9,6 @@ WINDOW* main_screen;
 
 void init_main_screen(int ROWS, int COLS);
 int check_border(int border, vec2 pos);
+int check_all_borders(vec2 pos);
 
 #endif /* MAIN_SCREEN_H_INCLUDED */
