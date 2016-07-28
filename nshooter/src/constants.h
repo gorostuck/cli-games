@@ -6,11 +6,17 @@
 //#define DEBUG_MODE
 
 /* DIRECTIONS */
-#define NONE  0
-#define LEFT  1
-#define RIGHT 2
-#define DOWN  3
-#define UP    4
+#define DIR_NONE  0
+#define DIR_LEFT  1
+#define DIR_RIGHT 2
+#define DIR_DOWN  3
+#define DIR_UP    4
+
+/* BORDERS */
+#define BORDER_TOP    0
+#define BORDER_LEFT   1
+#define BORDER_RIGHT  2
+#define BORDER_BOTTOM 3
 
 /* KEYS */
 #define KEY_SPACE (int)' '

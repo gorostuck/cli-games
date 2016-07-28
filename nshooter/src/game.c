@@ -74,19 +74,19 @@ void move_cursor(int direction)
 #endif //DEBUG_MODE
   switch(move_within_borders(direction, current_x, current_y))
     {
-    case UP:
+    case DIR_UP:
       move(--current_y, current_x);
       return;
-    case RIGHT:
+    case DIR_RIGHT:
       move(current_y, ++current_x);
       return;
-    case DOWN:
+    case DIR_DOWN:
       move(++current_y, current_x);
       return;
-    case LEFT:
+    case DIR_LEFT:
       move(current_y, --current_x);
       return;
-    case NONE:
+    case DIR_NONE:
       return;
     }
 }

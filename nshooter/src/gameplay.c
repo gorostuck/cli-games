@@ -40,6 +40,6 @@ int shoot(int y, int x)
     return SHOOT_FAIL;
   }
   substract_ammo();
-  printw("%c", (char)STATUS_SHOOTED);
+  addch((char)STATUS_SHOOTED);
   return SHOOT_OK;
 }
