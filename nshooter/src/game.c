@@ -4,6 +4,7 @@
 #include <string.h>
 
 #include "constants.h"
+#include "vec2.h"
 #include "window.h"
 #include "main_screen.h"
 #include "ammo.h"
@@ -58,8 +59,8 @@ void load_constants()
 int read_input(int k)
 {
   if (k==KEY_SPACE) {
-    if (shoot(current_y, current_x)!=SHOOT_OK)
-      return 1;
+    if (shoot(cursor_vec2())!=SHOOT_OK)
+      return 0;
   }
   else move_cursor(k);
   return 1;

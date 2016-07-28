@@ -33,9 +33,9 @@ int move_within_borders(int KEY)
 }
 
 // TODO: Make it so cursor is returned to its original position
-int shoot(int y, int x)
+int shoot(vec2 pos)
 {
-  char status = (char)mvgetch(y, x);
+  char status = (char)mvgetch(pos.y, pos.x);
   if (current_ammo==0||status==STATUS_SHOOTED){
     return SHOOT_FAIL;
   }

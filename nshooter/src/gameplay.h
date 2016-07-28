@@ -2,7 +2,9 @@
 #ifndef GAMEPLAY_H_INCLUDED
 #define GAMEPLAY_H_INCLUDED
 
+#include "vec2.h"
+
 int move_within_borders(int KEY);
-int shoot(int y, int x);
+int shoot(vec2 pos);
 
 #endif // GAMEPLAY_H_INCLUDED
