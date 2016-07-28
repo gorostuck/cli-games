@@ -15,4 +15,4 @@ WINDOW *window_in_middle(int height, int width, int max_y, int max_x);
 void destroy_win(WINDOW* local_window);
 void print_in_middle(int max_y, int max_x, const char* string);
 
-#endif
+#endif /* WINDOW_H_INCLUDED */

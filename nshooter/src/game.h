@@ -10,8 +10,6 @@ int read_input();
 void move_cursor(int direction);
 void init();
 
-#ifdef DEBUG_MODE
 void print_debug_stuff();
-#endif // DEBUG_MODE
 
-#endif // GAME_H_INCLUDED
+#endif /* GAME_H_INCLUDED */

@@ -13,4 +13,4 @@ void init_ammo();
 void render_ammo();
 void substract_ammo();
 
-#endif // AMMO_H_INCLUDED
+#endif /* AMMO_H_INCLUDED */

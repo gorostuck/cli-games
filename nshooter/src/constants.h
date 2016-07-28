@@ -3,7 +3,7 @@
 #define CONSTANTS_H_DEFINED
 
 /* MACROS */
-//#define DEBUG_MODE
+#define DEBUG_MODE
 
 /* DIRECTIONS */
 #define DIR_NONE  0
@@ -47,7 +47,5 @@
 /* STRINGS */
 #define S_WELCOME "Hi tehre! Press any key to start playing"
 #define S_GAME_START "*****GAME START*****"
-
-
 
 #endif //CONSTANTS_H_DEFINED

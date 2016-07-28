@@ -45,7 +45,7 @@ void init()
 
 #ifdef DEBUG_MODE
   print_debug_stuff();
-#endif // DEBUG_MODE
+#endif /* DEBUG_MODE */
 }
 
 int read_input(int k)
@@ -102,52 +102,4 @@ void print_debug_stuff()
   move(6,1);
   printw("AMMO_SCREEN_COLS: %d", AMMO_SCREEN_COLS);
 }
-#endif // DEBUG_MODE
-
-// THAT'S TRASH
-/*
-int move_within_borders(int k)
-{
-
-#ifdef DEBUG_MODE
-  move(0,0);
-  printw("%d, %d", current_y, current_x);
-  move(current_y, current_x);
-#endif // DEBUG_MODE
-
-  switch(move_within_bo)
-    {
-    case KEY_K:
-      if (current_y > (TOTAL_SCREEN_ROWS/2 - MAIN_SCREEN_ROWS/2))
-        {
-          move(--current_y, current_x);
-          return 0;
-        }
-      break;
-    case KEY_L:
-      if (current_x < (TOTAL_SCREEN_COLS/2 + MAIN_SCREEN_COLS/2))
-        {
-          move(current_y, ++current_x);
-          return 0;
-        }
-      break;
-    case KEY_J:
-      if (current_y < (TOTAL_SCREEN_ROWS/2 + MAIN_SCREEN_ROWS/2)-1)
-        {
-          move(++current_y, current_x);
-          return 0;
-        }
-      break;
-    case KEY_A:
-      if (current_x > (TOTAL_SCREEN_COLS/2 - MAIN_SCREEN_COLS/2))
-        {
-          move(current_y, --current_x);
-          return 0;
-        }
-      break;
-    default:
-      break;
-    }
-  return 1;
-}
-*/
+#endif /* DEBUG_MODE */
