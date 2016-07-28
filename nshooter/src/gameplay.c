@@ -12,24 +12,24 @@ int move_within_borders(int KEY, int y, int x )
     {
     case KEY_K:
       if (x > (TOTAL_SCREEN_ROWS/2 - MAIN_SCREEN_ROWS/2))
-        return UP;
+        return DIR_UP;
       break;
     case KEY_L:
       if (y < (TOTAL_SCREEN_COLS/2 + MAIN_SCREEN_COLS/2))
-        return RIGHT;
+        return DIR_RIGHT;
       break;
     case KEY_J:
       if (x < (TOTAL_SCREEN_ROWS/2 + MAIN_SCREEN_ROWS/2)-1)
-        return DOWN;
+        return DIR_DOWN;
       break;
     case KEY_H:
       if (y > (TOTAL_SCREEN_COLS/2 - MAIN_SCREEN_COLS/2))
-        return LEFT;
+        return DIR_LEFT;
       break;
    default:
-      return NONE;
+     return DIR_NONE;
     }
-  return NONE;
+  return DIR_NONE;
 }
 
 // TODO: Make it so cursor is returned to its original position
