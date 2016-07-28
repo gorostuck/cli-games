@@ -6,7 +6,7 @@
 #include "main_screen.h"
 #include "window.h"
 
-int move_within_borders(int KEY, int y, int x )
+int move_within_borders(int KEY)
 {
   switch(KEY)
     {

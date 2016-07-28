@@ -72,7 +72,7 @@ void move_cursor(int direction)
   printw("(%d, %d)", current_y, current_x);
   move(current_y, current_x);
 #endif //DEBUG_MODE
-  switch(move_within_borders(direction, current_x, current_y))
+  switch(move_within_borders(direction))
     {
     case DIR_UP:
       move(--current_y, current_x);
