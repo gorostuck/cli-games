@@ -11,19 +11,19 @@ int move_within_borders(int KEY, int y, int x )
   switch(KEY)
     {
     case KEY_K:
-      if (x > (TOTAL_SCREEN_ROWS/2 - MAIN_SCREEN_ROWS/2))
+      if (check_border(BORDER_TOP, cursor_vec2()))
         return DIR_UP;
       break;
     case KEY_L:
-      if (y < (TOTAL_SCREEN_COLS/2 + MAIN_SCREEN_COLS/2))
+      if (check_border(BORDER_RIGHT, cursor_vec2()))
         return DIR_RIGHT;
       break;
     case KEY_J:
-      if (x < (TOTAL_SCREEN_ROWS/2 + MAIN_SCREEN_ROWS/2)-1)
+      if (check_border(BORDER_BOTTOM, cursor_vec2()))
         return DIR_DOWN;
       break;
     case KEY_H:
-      if (y > (TOTAL_SCREEN_COLS/2 - MAIN_SCREEN_COLS/2))
+      if (check_border(BORDER_LEFT, cursor_vec2()))
         return DIR_LEFT;
       break;
    default:
