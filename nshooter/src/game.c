@@ -49,13 +49,19 @@ void init()
 #endif /* DEBUG_MODE */
 }
 
-int read_input(int k)
+int read_input(int KEY)
 {
-  if (k==KEY_SHOOT) {
-    if (shoot(cursor_vec2())==SHOOT_FAIL)
-      return 1;
+  switch (KEY){
+  case KEY_MOVE_UP:
+  case KEY_MOVE_RIGHT:
+  case KEY_MOVE_DOWN:
+  case KEY_MOVE_LEFT:
+    move_cursor(KEY);
+    break;
+  case KEY_SHOOT:
+    shoot(cursor_vec2());
+    break;
   }
-  else move_cursor(k);
   return 1;
 }
 

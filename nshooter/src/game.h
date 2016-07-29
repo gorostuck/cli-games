@@ -6,7 +6,7 @@ int current_y, current_x;
 
 int game_start();
 int game_loop();
-int read_input();
+int read_input(int KEY);
 void init();
 
 void print_debug_stuff();
