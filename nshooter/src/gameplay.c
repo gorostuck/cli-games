@@ -36,11 +36,11 @@ int move_within_borders(int KEY)
 int shoot(vec2 pos)
 {
   char status = (char)mvinch(pos.y, pos.x);
-  printw("%c", status);
   if (current_ammo==0||status==STATUS_SHOOTED){
     return SHOOT_FAIL;
   }
   substract_ammo();
   addch((char)STATUS_SHOOTED);
+  move(pos.y, pos.x);
   return SHOOT_OK;
 }
