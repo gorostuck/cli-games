@@ -37,9 +37,9 @@ int game_loop()
 
 void init()
 {
-  keypad(stdscr, TRUE);
   initscr();
   cbreak();
+  nodelay(stdscr, TRUE);
   noecho();
   getmaxyx(stdscr, TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
   box(stdscr, 0,0);
