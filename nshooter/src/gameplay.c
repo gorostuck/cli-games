@@ -1,7 +1,7 @@
 // This file contains the definition for the gameplay actions component
 #include "gameplay.h"
 
-#include "constants.h"
+#include "defines.h"
 #include "ammo.h"
 #include "main_screen.h"
 #include "window.h"
@@ -10,19 +10,19 @@ int move_within_borders(int KEY)
 {
   switch(KEY)
     {
-    case KEY_K:
+    case KEY_MOVE_UP:
       if (check_border(BORDER_TOP, cursor_vec2()))
         return DIR_UP;
       break;
-    case KEY_L:
+    case KEY_MOVE_RIGHT:
       if (check_border(BORDER_RIGHT, cursor_vec2()))
         return DIR_RIGHT;
       break;
-    case KEY_J:
+    case KEY_MOVE_DOWN:
       if (check_border(BORDER_BOTTOM, cursor_vec2()))
         return DIR_DOWN;
       break;
-    case KEY_H:
+    case KEY_MOVE_LEFT:
       if (check_border(BORDER_LEFT, cursor_vec2()))
         return DIR_LEFT;
       break;

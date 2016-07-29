@@ -1,6 +1,6 @@
 // This file contains constants for several purposes
-#ifndef CONSTANTS_H_DEFINED
-#define CONSTANTS_H_DEFINED
+#ifndef DEFINES_H_DEFINED
+#define DEFINES_H_DEFINED
 
 /* MACROS */
 //#define DEBUG_MODE
@@ -20,12 +20,10 @@
 
 /* KEYS */
 #define KEY_SPACE (int)' '
-
 #define KEY_K     (int)'k'
 #define KEY_J     (int)'j'
 #define KEY_H     (int)'h'
 #define KEY_L     (int)'l'
-
 #define KEY_I     (int)'i'
 
 /* MAIN_SCREEN */
@@ -48,4 +46,12 @@
 #define S_WELCOME "Hi tehre! Press any key to start playing"
 #define S_GAME_START "*****GAME START*****"
 
-#endif //CONSTANTS_H_DEFINED
+/* CONTROLS */
+#define KEY_SHOOT      KEY_SPACE
+
+#define KEY_MOVE_UP    KEY_K
+#define KEY_MOVE_RIGHT KEY_L
+#define KEY_MOVE_DOWN  KEY_J
+#define KEY_MOVE_LEFT  KEY_H
+
+#endif //DEFINES_H_DEFINED

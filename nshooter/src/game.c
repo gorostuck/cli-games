@@ -3,7 +3,7 @@
 
 #include <string.h>
 
-#include "constants.h"
+#include "defines.h"
 #include "vec2.h"
 #include "window.h"
 #include "main_screen.h"
@@ -30,6 +30,7 @@ int game_loop()
   if (read_input(getch())==0) return 0;
   render_ammo();
   refresh();
+  if(current_ammo==0) return 0;
   return 1;
 }
 
@@ -50,7 +51,7 @@ void init()
 
 int read_input(int k)
 {
-  if (k==KEY_SPACE) {
+  if (k==KEY_SHOOT) {
     if (shoot(cursor_vec2())==SHOOT_FAIL)
       return 1;
   }

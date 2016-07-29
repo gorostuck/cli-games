@@ -1,7 +1,7 @@
 // This file contains the definition for the ammo component
 #include "ammo.h"
 
-#include "constants.h"
+#include "defines.h"
 #include "main_screen.h"
 
 void init_ammo()
