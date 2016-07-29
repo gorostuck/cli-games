@@ -24,7 +24,7 @@ int check_border(int border, vec2 pos)
       return TRUE;
     break;
   case BORDER_BOTTOM:
-    if (pos.y < (TOTAL_SCREEN_COLS/2 - MAIN_SCREEN_COLS/2))
+    if (pos.y < (TOTAL_SCREEN_ROWS/2 + MAIN_SCREEN_ROWS/2)-1)
       return TRUE;
     break;
   default:
@@ -33,7 +33,7 @@ int check_border(int border, vec2 pos)
   return FALSE;
 }
 
-int check_all_bordes(vec2 pos)
+int check_all_borders(vec2 pos)
 {
   if (check_border(BORDER_TOP, pos) && check_border(BORDER_LEFT, pos) &&
       check_border(BORDER_RIGHT, pos) && check_border(BORDER_BOTTOM, pos))

@@ -3,7 +3,7 @@
 #define CONSTANTS_H_DEFINED
 
 /* MACROS */
-#define DEBUG_MODE
+//#define DEBUG_MODE
 
 /* DIRECTIONS */
 #define DIR_NONE  0
