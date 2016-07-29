@@ -7,7 +7,6 @@ int current_y, current_x;
 int game_start();
 int game_loop();
 int read_input();
-void move_cursor(int direction);
 void init();
 
 void print_debug_stuff();

@@ -58,34 +58,6 @@ int read_input(int k)
   return 1;
 }
 
-void move_cursor(int direction)
-{
-  #ifdef DEBUG_MODE
-  move(0,0);
-  printw("(%d, %d)", current_y, current_x);
-  move(current_y, current_x);
-#endif /* DEBUG_MODE */
-  switch(move_within_borders(direction))
-    {
-    case DIR_UP:
-      move(--current_y, current_x);
-      return;
-    case DIR_RIGHT:
-      move(current_y, ++current_x);
-      return;
-    case DIR_DOWN:
-      move(++current_y, current_x);
-      return;
-    case DIR_LEFT:
-      move(current_y, --current_x);
-      return;
-    case DIR_NONE:
-      return;
-    }
-}
-
-
-
 #ifdef DEBUG_MODE
 void print_debug_stuff()
 {

@@ -7,4 +7,7 @@
 int move_within_borders(int KEY);
 int shoot(vec2 pos);
 
+void move_cursor(int direction);
+
+
 #endif // GAMEPLAY_H_INCLUDED

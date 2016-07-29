@@ -32,6 +32,35 @@ int move_within_borders(int KEY)
   return DIR_NONE;
 }
 
+void move_cursor(int direction)
+{
+
+#ifdef DEBUG_MODE
+  move(0,0);
+  printw("(%d, %d)", current_y, current_x);
+  move(current_y, current_x);
+#endif /* DEBUG_MODE */
+
+  vec2 current_pos = cursor_vec2();
+  switch(move_within_borders(direction))
+    {
+    case DIR_UP:
+      move(--current_pos.y, current_pos.x);
+      return;
+    case DIR_RIGHT:
+      move(current_pos.y, ++current_pos.x);
+      return;
+    case DIR_DOWN:
+      move(++current_pos.y, current_pos.x);
+      return;
+    case DIR_LEFT:
+      move(current_pos.y, --current_pos.x);
+      return;
+    case DIR_NONE:
+      return;
+    }
+}
+
 // TODO: Make it so cursor is returned to its original position
 int shoot(vec2 pos)
 {
