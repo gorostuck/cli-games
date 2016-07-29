@@ -43,3 +43,9 @@ void substract_ammo()
   --current_ammo;
   render_ammo();
 }
+
+void reload_ammo()
+{
+  current_ammo = MAX_AMMO;
+  render_ammo();
+}

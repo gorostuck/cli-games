@@ -61,6 +61,9 @@ int read_input(int KEY)
   case KEY_SHOOT:
     shoot(cursor_vec2());
     break;
+  case KEY_RELOAD:
+    reload_ammo();
+    break;
   }
   return 1;
 }

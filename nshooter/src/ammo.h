@@ -12,5 +12,6 @@ int ammo_screen_starting_y, ammo_screen_starting_x;
 void init_ammo();
 void render_ammo();
 void substract_ammo();
+void reload_ammo();
 
 #endif /* AMMO_H_INCLUDED */

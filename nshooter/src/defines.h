@@ -49,6 +49,8 @@
 /* CONTROLS */
 #define KEY_SHOOT      KEY_SPACE
 
+#define KEY_RELOAD     KEY_I
+
 #define KEY_MOVE_UP    KEY_K
 #define KEY_MOVE_RIGHT KEY_L
 #define KEY_MOVE_DOWN  KEY_J
