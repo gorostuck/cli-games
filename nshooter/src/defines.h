@@ -43,7 +43,7 @@
 #define STATUS_SHOOTED (int)'x'
 
 /* STRINGS */
-#define S_WELCOME "Hi tehre! Press any key to start playing"
+#define S_WELCOME "Hi there! Press any key to start playing"
 #define S_GAME_START "*****GAME START*****"
 
 /* CONTROLS */
@@ -56,4 +56,4 @@
 #define KEY_MOVE_DOWN  KEY_J
 #define KEY_MOVE_LEFT  KEY_H
 
-#endif //DEFINES_H_DEFINED
+#endif /* DEFINES_H_INCLUDED */
