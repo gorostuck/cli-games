@@ -26,7 +26,6 @@ int game_start()
 
 int game_loop()
 {
-  getyx(stdscr, current_y, current_x);
   if (read_input(getch())==0) return 0;
   render_ammo();
   refresh();

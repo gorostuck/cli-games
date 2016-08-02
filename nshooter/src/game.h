@@ -2,7 +2,6 @@
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 
-int current_y, current_x;
 
 int game_start();
 int game_loop();
