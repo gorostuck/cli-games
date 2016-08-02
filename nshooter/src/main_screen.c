@@ -3,9 +3,9 @@
 
 #include "defines.h"
 
-void init_main_screen(int ROWS, int COLS)
+void init_main_screen()
 {
-    main_screen = window_in_middle(MAIN_SCREEN_ROWS, MAIN_SCREEN_COLS, ROWS, COLS);
+    main_screen = window_in_middle(MAIN_SCREEN_ROWS, MAIN_SCREEN_COLS, TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
 }
 
 int check_border(int border, vec2 pos)

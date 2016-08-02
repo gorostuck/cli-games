@@ -5,5 +5,5 @@
 #include "window.h"
 WINDOW* tutorial_screen;
 
-print_in_tutorial(char* str);
-#enfid /* TUTORIAL_SCREEN_H_DEFINED */
+void print_in_tutorial(char* str);
+#endif /* TUTORIAL_SCREEN_H_DEFINED */

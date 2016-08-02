@@ -7,7 +7,7 @@
 
 WINDOW* main_screen;
 
-void init_main_screen(int ROWS, int COLS);
+void init_main_screen();
 int check_border(int border, vec2 pos);
 int check_all_borders(vec2 pos);
 
