@@ -2,7 +2,7 @@
 #include "ammo.h"
 
 #include "defines.h"
-#include "main_screen.h"
+#include "window.h"
 
 void init_ammo()
 {

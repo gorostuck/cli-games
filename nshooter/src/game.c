@@ -7,6 +7,7 @@
 #include "vec2.h"
 #include "window.h"
 #include "main_screen.h"
+#include "tutorial_screen.h"
 #include "ammo.h"
 #include "gameplay.h"
 
@@ -17,6 +18,7 @@ int game_start()
   getch();
   init_main_screen(TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
   init_ammo();
+  init_tutorial_screen();
   move(Y_CENTER, X_CENTER);
   while (game_loop());
   destroy_win(main_screen);
@@ -61,6 +63,7 @@ int read_input(int KEY)
     shoot(cursor_vec2());
     break;
   case KEY_RELOAD:
+    print_in_tutorial(KEY_RELOAD);
     reload_ammo();
     break;
   }
@@ -82,5 +85,9 @@ void print_debug_stuff()
   printw("AMMO_SCREEN_ROWS: %d", AMMO_SCREEN_ROWS);
   move(6,1);
   printw("AMMO_SCREEN_COLS: %d", AMMO_SCREEN_COLS);
+  move(7,1);
+  printw("TUTORIAL_SCREEN_ROWS: %d", TUTORIAL_SCREEN_ROWS);
+  move(8,1);
+  printw("TUTORIAL_SCREEN_COLS: %d", TUTORIAL_SCREEN_COLS);
 }
 #endif /* DEBUG_MODE */

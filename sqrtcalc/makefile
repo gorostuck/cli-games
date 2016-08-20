@@ -14,7 +14,7 @@ GENCODE_FLAGS := -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,co
 arch=compute_35,code=sm_35
 NVCCFLAGS     := $(GENCODE_FLAGS) --compiler-options -fno-strict-aliasing -lineinfo -use_fast_math -Xptxas -dlcm=cg
 
-CC   := clang
+CC   := gcc
 CXX  := g++ 
 NVCC := /usr/local/cuda/bin/nvcc
 

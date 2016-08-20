@@ -15,7 +15,7 @@ arch=compute_35,code=sm_35
 NVCCFLAGS     := $(GENCODE_FLAGS) --compiler-options -fno-strict-aliasing -lineinfo -use_fast_math -Xptxas -dlcm=cg
 
 CC   := gcc
-CXX  := g++
+CXX  := gcc
 NVCC := /usr/local/cuda/bin/nvcc
 
 all: $(OBJECTS)

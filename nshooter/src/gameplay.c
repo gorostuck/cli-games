@@ -35,13 +35,12 @@ int move_within_borders(int KEY)
 void move_cursor(int direction)
 {
 
-#ifdef DEBUG_MODE
-  move(0,0);
-  printw("(%d, %d)", current_y, current_x);
-  move(current_y, current_x);
-#endif /* DEBUG_MODE */
-
   vec2 current_pos = cursor_vec2();
+  #ifdef DEBUG_MODE
+  move(0,0);
+  printw("(%d, %d)", current_pos.y, current_pos.x);
+  move(current_pos.y, current_pos.x);
+  #endif /* DEBUG_MODE */
   switch(move_within_borders(direction))
     {
     case DIR_UP:
