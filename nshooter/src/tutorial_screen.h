@@ -7,4 +7,8 @@ WINDOW* tutorial_screen;
 
 void init_tutorial_screen();
 void print_in_tutorial();
+
+int tutorial_screen_starting_y;
+int tutorial_screen_starting_x;
+
 #endif /* TUTORIAL_SCREEN_H_DEFINED */
