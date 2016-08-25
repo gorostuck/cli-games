@@ -23,7 +23,7 @@ void print_in_tutorial(const char* str)
   move(tutorial_screen_starting_y, tutorial_screen_starting_x);
   vec2 cursor_pos = cursor_vec2();
   for(int y=1; y < TUTORIAL_SCREEN_COLS-3; ++y){
-    for(int x=1; x <= TUTORIAL_SCREEN_ROWS && index < strlen(str); ++index,++x){
+    for(int x=1; x <= TUTORIAL_SCREEN_ROWS; ++index,++x){
       move(cursor_pos.y+y, cursor_pos.x+x);
       if (index < strlen(str)) addch(str[index]);
       else addch(CHAR_NULL);
@@ -34,12 +34,14 @@ void print_in_tutorial(const char* str)
 
 void clean_tutorial()
 {
+  vec2 old_pos = cursor_vec2();
   move(tutorial_screen_starting_y, tutorial_screen_starting_x);
   vec2 cursor_pos = cursor_vec2();
   for(int y=1; y < TUTORIAL_SCREEN_COLS-3; ++y){
-    for(int x=1; x <= TUTORIAL_SCREEN_ROWS && index < strlen(str); ++index,++x){
+    for(int x=1; x <= TUTORIAL_SCREEN_ROWS; ++x){
       move(cursor_pos.y+y, cursor_pos.x+x);
       addch(CHAR_NULL);
     }
   }
+  vmove(old_pos);
 }

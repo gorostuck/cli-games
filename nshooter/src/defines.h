@@ -64,7 +64,7 @@
 #define KEY_MOVE_LEFT  KEY_H
 #define KEY_SHOOT      KEY_SPACE
 #define KEY_RELOAD     KEY_I
-#define KEY_PRINT      KEY_P
-#define KEY_CLEAR      KEY_U
+#define KEY_TUTORIAL   KEY_P
+#define KEY_CLEAN      KEY_U
 
 #endif /* DEFINES_H_INCLUDED */

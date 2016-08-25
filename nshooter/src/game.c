@@ -66,10 +66,10 @@ int read_input(int KEY)
     print_in_tutorial("test");
     reload_ammo();
     break;
-  case KEY_PRINT:
-    print_in_tutorial("PRESS %c TO REMOVE THIS MESS HEHEHEHEHE", KEY_CLEAN);
+  case KEY_TUTORIAL:
+    print_in_tutorial("PRESS KEY_CLEAN TO REMOVE THIS MESS HEHEHEHEHE");
     break;
-  case kEY_CLEAN:
+  case KEY_CLEAN:
     clean_tutorial();
     break;
   }
