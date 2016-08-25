@@ -54,8 +54,8 @@
 #define CHAR_NULL ' '
 
 /* STRINGS */
-#define S_WELCOME "Hi there! Press any key to start playing"
-#define S_GAME_START "*****GAME START*****"
+#define S_WELCOME "Hi there! Press p to print the tutorial."
+#define S_TUTORIAL "Use kjhl to move, shoot with space, reload with i, print this with p and clean this screen with u."
 
 /* CONTROLS */
 #define KEY_MOVE_UP    KEY_K

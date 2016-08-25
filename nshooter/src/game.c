@@ -20,6 +20,7 @@ int game_start()
   init_ammo();
   init_tutorial_screen();
   move(Y_CENTER, X_CENTER);
+  print_in_tutorial(S_WELCOME);
   while (game_loop());
   destroy_win(main_screen);
   endwin();
@@ -63,11 +64,10 @@ int read_input(int KEY)
     shoot(cursor_vec2());
     break;
   case KEY_RELOAD:
-    print_in_tutorial("test");
     reload_ammo();
     break;
   case KEY_TUTORIAL:
-    print_in_tutorial("PRESS KEY_CLEAN TO REMOVE THIS MESS HEHEHEHEHE");
+    print_in_tutorial(S_TUTORIAL);
     break;
   case KEY_CLEAN:
     clean_tutorial();
