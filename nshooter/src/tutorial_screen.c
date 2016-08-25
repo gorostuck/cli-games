@@ -31,3 +31,15 @@ void print_in_tutorial(const char* str)
   }
   vmove(old_pos);
 }
+
+void clean_tutorial()
+{
+  move(tutorial_screen_starting_y, tutorial_screen_starting_x);
+  vec2 cursor_pos = cursor_vec2();
+  for(int y=1; y < TUTORIAL_SCREEN_COLS-3; ++y){
+    for(int x=1; x <= TUTORIAL_SCREEN_ROWS && index < strlen(str); ++index,++x){
+      move(cursor_pos.y+y, cursor_pos.x+x);
+      addch(CHAR_NULL);
+    }
+  }
+}

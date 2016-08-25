@@ -63,8 +63,14 @@ int read_input(int KEY)
     shoot(cursor_vec2());
     break;
   case KEY_RELOAD:
-    print_in_tutorial("ey boss");
+    print_in_tutorial("test");
     reload_ammo();
+    break;
+  case KEY_PRINT:
+    print_in_tutorial("PRESS %c TO REMOVE THIS MESS HEHEHEHEHE", KEY_CLEAN);
+    break;
+  case kEY_CLEAN:
+    clean_tutorial();
     break;
   }
   return 1;
