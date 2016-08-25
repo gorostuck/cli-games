@@ -4,18 +4,18 @@ OBJECTS := $(patsubst src%,obj%, $(patsubst %.cu,%.device.o, $(patsubst %.cpp,%.
 
 INCLUDE := -Ideps/include
 LIBPATH := -L/usr/local/lib64
-LIBS    := 
+LIBS    := -lncurses 
 
-FLAGS    := -O3 -ffast-math -Wall -fopenmp -lncurses
-CCFLAGS  := $(FLAGS) 
-CXXFLAGS := $(FLAGS) -std=c++11 
+FLAGS    := -O3 -ffast-math -Wall -fopenmp
+CCFLAGS  := $(FLAGS)
+CXXFLAGS := $(FLAGS)
 
 GENCODE_FLAGS := -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode
 arch=compute_35,code=sm_35
 NVCCFLAGS     := $(GENCODE_FLAGS) --compiler-options -fno-strict-aliasing -lineinfo -use_fast_math -Xptxas -dlcm=cg
 
 CC   := gcc
-CXX  := gcc
+CXX  := g++
 NVCC := /usr/local/cuda/bin/nvcc
 
 all: $(OBJECTS)
@@ -38,7 +38,7 @@ src/cmdline.c: src/cmdline.ggo
 
 run:
 	./bin/app
-              
+
 clean:
 	rm -rf obj/*
 	rm -f $(APPNAME)

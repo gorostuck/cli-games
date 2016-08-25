@@ -15,7 +15,6 @@ void init_tutorial_screen()
 
 void print_in_tutorial()
 {
-  vec2 old_cursor_pos = cursor_vec2();
   move(tutorial_screen_starting_y, tutorial_screen_starting_x);
   vec2 cursor_pos = cursor_vec2();
   for(int y=1; y < TUTORIAL_SCREEN_COLS-3; ++y){
