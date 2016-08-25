@@ -3,6 +3,7 @@
 #define WINDOW_H_INCLUDED
 
 #include <ncurses.h>
+#include "vec2.h"
 
 int TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS;
 

@@ -48,6 +48,9 @@
 #define STATUS_NONE    (int)' '
 #define STATUS_SHOOTED (int)'x'
 
+/* CHARS */
+#define CHAR_NULL ' '
+
 /* STRINGS */
 #define S_WELCOME "Hi there! Press any key to start playing"
 #define S_GAME_START "*****GAME START*****"

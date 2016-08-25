@@ -63,7 +63,7 @@ int read_input(int KEY)
     shoot(cursor_vec2());
     break;
   case KEY_RELOAD:
-    print_in_tutorial(KEY_RELOAD);
+    print_in_tutorial("ey boss");
     reload_ammo();
     break;
   }

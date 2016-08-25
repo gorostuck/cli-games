@@ -10,4 +10,6 @@ typedef struct vec2
 
 vec2 cursor_vec2();
 
+void vmove(vec2 new_pos);
+
 #endif /* VEC2_H_INCLUDED */
