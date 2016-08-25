@@ -69,6 +69,6 @@ int shoot(vec2 pos)
   }
   substract_ammo();
   addch((char)STATUS_SHOOTED);
-  move(pos.y, pos.x);
+  vmove(pos);
   return SHOOT_OK;
 }
