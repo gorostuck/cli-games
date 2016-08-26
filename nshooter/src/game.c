@@ -32,7 +32,6 @@ int game_loop()
   if (read_input(getch())==0) return 0;
   render_ammo();
   refresh();
-  if(current_ammo==0) return 0;
   return 1;
 }
 
@@ -72,6 +71,8 @@ int read_input(int KEY)
   case KEY_CLEAN:
     clean_tutorial();
     break;
+  case KEY_ESCAPE:
+    return 0;
   }
   return 1;
 }

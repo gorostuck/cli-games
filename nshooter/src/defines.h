@@ -27,6 +27,7 @@
 #define KEY_I     (int)'i'
 #define KEY_P     (int)'p'
 #define KEY_U     (int)'u'
+#define KEY_ESC   27
 
 /* MAIN_SCREEN */
 #define MAIN_SCREEN_ROWS 20
@@ -35,7 +36,7 @@
 /* TUTORIAL_SCREEN */
 #define TUTORIAL_SCREEN_ROWS_DIFF 2
 #define TUTORIAL_SCREEN_ROWS MAIN_SCREEN_ROWS-TUTORIAL_SCREEN_ROWS_DIFF
-#define TUTORIAL_SCREEN_COLS 20
+#define TUTORIAL_SCREEN_COLS 40
 #define TUTORIAL_SCREEN_SIZE (TUTORIAL_SCREEN_ROWS-2)*(TUTORIAL_SCREEN_COLS-2)
 
 /* AMMO */
@@ -55,7 +56,7 @@
 
 /* STRINGS */
 #define S_WELCOME "Hi there! Press p to print the tutorial."
-#define S_TUTORIAL "Use kjhl to move, shoot with space, reload with i, print this with p and clean this screen with u."
+#define S_TUTORIAL "->Move with 'k-h-j-l'/->Shoot with 'space' /->Reload with 'i'/->Print this with 'p' /->Clean this screen with 'u'/->Exit with 'escape'"
 
 /* CONTROLS */
 #define KEY_MOVE_UP    KEY_K
@@ -66,5 +67,6 @@
 #define KEY_RELOAD     KEY_I
 #define KEY_TUTORIAL   KEY_P
 #define KEY_CLEAN      KEY_U
+#define KEY_ESCAPE     KEY_ESC
 
 #endif /* DEFINES_H_INCLUDED */

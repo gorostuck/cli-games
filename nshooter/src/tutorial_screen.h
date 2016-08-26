@@ -7,6 +7,7 @@ WINDOW* tutorial_screen;
 
 void init_tutorial_screen();
 void print_in_tutorial(const char* str);
+void clean_tutorial();
 
 int tutorial_screen_starting_y;
 int tutorial_screen_starting_x;
