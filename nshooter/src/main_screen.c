@@ -1,10 +1,27 @@
 // This file contains the declarations for the main screen
 #include "main_screen.h"
 
+#include "vec2.h"
+
 void init_main_screen()
 {
-    main_screen = window_in_middle(MAIN_SCREEN_ROWS, MAIN_SCREEN_COLS, TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
+    main_screen_starting_y = (TOTAL_SCREEN_ROWS-MAIN_SCREEN_ROWS)/2;
+    main_screen_starting_x = (TOTAL_SCREEN_COLS-MAIN_SCREEN_COLS)/2;
+
+    main_screen = create_newwin(MAIN_SCREEN_ROWS, MAIN_SCREEN_COLS, main_screen_starting_y, main_screen_starting_x);
 }
+
+/*
+void refresh_field()
+{
+  vec2 old_pos = cursor_vec2();
+  for (int y=1; y < MAIN_SCREEN_ROWS; ++y){
+    for (int x=1; x < MAIN_SCREEN_COLS; ++x)
+    }
+
+    vmove(old-pos);
+}
+*/
 
 int check_border(int border, vec2 pos)
 { /* This way you are not allowed to go within borders */

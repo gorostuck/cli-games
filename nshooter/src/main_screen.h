@@ -7,10 +7,11 @@
 #include "defines.h"
 
 WINDOW* main_screen;
-
-char field[MAIN_SCREEN_COLS][MAIN_SCREEN_ROWS];
+char field[MAIN_SCREEN_ROWS][MAIN_SCREEN_COLS];
+int main_screen_starting_y, main_screen_starting_x;
 
 void init_main_screen();
+void refresh_field();
 int check_border(int border, vec2 pos);
 int check_all_borders(vec2 pos);
 
