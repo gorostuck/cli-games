@@ -51,8 +51,8 @@
 #define STATUS_NONE    (int)' '
 #define STATUS_SHOOTED (int)'x'
 
-/* CHARS */
-#define CHAR_NULL ' '
+/* ENEMIES */
+#define ENEMY_NORMAL 'o'
 
 /* STRINGS */
 #define S_WELCOME "Hi there! Press p to print the tutorial."

@@ -10,6 +10,7 @@
 #include "tutorial_screen.h"
 #include "ammo.h"
 #include "gameplay.h"
+#include "enemy.h"
 
 int game_start()
 {

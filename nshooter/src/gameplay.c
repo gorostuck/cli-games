@@ -5,6 +5,7 @@
 #include "ammo.h"
 #include "main_screen.h"
 #include "window.h"
+#include "enemy.h"
 
 int move_within_borders(int KEY)
 {
@@ -69,5 +70,6 @@ int shoot(vec2 pos)
   substract_ammo();
   addch((char)STATUS_SHOOTED);
   vmove(pos);
+  spawn_random_enemy();
   return SHOOT_OK;
 }

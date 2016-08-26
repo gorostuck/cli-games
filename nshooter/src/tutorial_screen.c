@@ -35,7 +35,7 @@ void print_in_tutorial(const char* str)
         }
         addch(str[index]);
       }
-      else addch(CHAR_NULL);
+      else addch(' ');
     }
   }
   vmove(old_pos);
@@ -49,7 +49,7 @@ void clean_tutorial()
   for(int y=1; y < TUTORIAL_SCREEN_ROWS-1; ++y){
     for(int x=1; x < TUTORIAL_SCREEN_COLS-1; ++x){
       move(cursor_pos.y+y, cursor_pos.x+x);
-      addch(CHAR_NULL);}
+      addch(' ');}
   }
   vmove(old_pos);
 }
