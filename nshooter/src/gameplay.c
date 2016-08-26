@@ -60,7 +60,6 @@ void move_cursor(int direction)
     }
 }
 
-// TODO: Make it so cursor is returned to its original position
 int shoot(vec2 pos)
 {
   char status = (char)mvinch(pos.y, pos.x);
