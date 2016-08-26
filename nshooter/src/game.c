@@ -14,15 +14,8 @@
 int game_start()
 {
   init();
-  move(0,0);
-  getch();
-  init_main_screen(TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
-  init_ammo();
-  init_tutorial_screen();
-  move(Y_CENTER, X_CENTER);
-  print_in_tutorial(S_WELCOME);
   while (game_loop());
-  destroy_win(main_screen);
+  destroy_windows();
   endwin();
   return 0;
 }
@@ -38,16 +31,40 @@ int game_loop()
 
 void init()
 {
-  initscr();
-  cbreak();
-  nodelay(stdscr, TRUE);
-  noecho();
-  getmaxyx(stdscr, TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
-  box(stdscr, 0,0);
+  init_ncurses();
+  init_screens();
+  move(Y_CENTER, X_CENTER);
+  print_in_tutorial(S_WELCOME);
 
 #ifdef DEBUG_MODE
   print_debug_stuff();
 #endif /* DEBUG_MODE */
+}
+
+void init_ncurses()
+{
+  initscr();
+  cbreak();
+  nodelay(stdscr, TRUE);
+  noecho();
+}
+
+void init_screens()
+{
+  getmaxyx(stdscr, TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
+  box(stdscr, 0,0);
+  move(0,0);
+  getch();
+  init_main_screen(TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
+  init_ammo();
+  init_tutorial_screen();
+}
+
+void destroy_windows()
+{
+  destroy_win(main_screen);
+  destroy_win(tutorial_screen);
+  destroy_win(ammo_screen);
 }
 
 int read_input(int KEY)

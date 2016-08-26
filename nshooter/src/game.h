@@ -6,7 +6,11 @@
 int game_start();
 int game_loop();
 int read_input(int KEY);
+
 void init();
+void init_ncurses();
+void init_screens();
+void destroy_windows();
 
 void print_debug_stuff();
 
