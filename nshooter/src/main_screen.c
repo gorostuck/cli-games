@@ -1,8 +1,6 @@
 // This file contains the declarations for the main screen
 #include "main_screen.h"
 
-#include "defines.h"
-
 void init_main_screen()
 {
     main_screen = window_in_middle(MAIN_SCREEN_ROWS, MAIN_SCREEN_COLS, TOTAL_SCREEN_ROWS, TOTAL_SCREEN_COLS);
