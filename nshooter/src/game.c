@@ -24,6 +24,7 @@ int game_loop()
 {
   if (read_input(getch())==0) return 0;
   render_ammo();
+  refresh_field();
   refresh();
   return 1;
 }

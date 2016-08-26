@@ -7,8 +7,8 @@
 #include "defines.h"
 
 WINDOW* main_screen;
-char field[MAIN_SCREEN_ROWS][MAIN_SCREEN_COLS];
 int main_screen_starting_y, main_screen_starting_x;
+char field[MAIN_SCREEN_ROWS][MAIN_SCREEN_COLS];
 
 void init_main_screen();
 void refresh_field();
