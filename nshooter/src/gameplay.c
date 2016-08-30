@@ -71,5 +71,7 @@ int shoot(vec2 pos)
   addch((char)STATUS_SHOOTED);
   vmove(pos);
   spawn_random_enemy();
+  if (status == ENEMY_NORMAL)
+    return SHOOT_ENEMY;
   return SHOOT_OK;
 }

@@ -78,7 +78,7 @@ int read_input(int KEY)
     move_cursor(KEY);
     break;
   case KEY_SHOOT:
-    shoot(cursor_vec2());
+    if (shoot(cursor_vec2())==SHOOT_ENEMY);
     break;
   case KEY_RELOAD:
     reload_ammo();
@@ -90,9 +90,24 @@ int read_input(int KEY)
     clean_tutorial();
     break;
   case KEY_ESCAPE:
+    print_score();
     return 0;
   }
   return 1;
+}
+
+void print_score()
+{
+  int score_screen_starting_y = (TOTAL_SCREEN_ROWS-SCORE_SCREEN_ROWS)/2;
+  int score_screen_starting_x = (TOTAL_SCREEN_COLS-SCORE_SCREEN_COLS)/2;
+
+  WINDOW* score_window = create_newwin(SCORE_SCREEN_ROWS, SCORE_SCREEN_COLS, score_screen_starting_y, score_screen_starting_x);
+
+  mvprintw(TOTAL_SCREEN_COLS/2, (TOTAL_SCREEN_ROWS-strlen("Score: XX"))/2, "Score: %n", 10);
+
+  getch();
+
+  destroy_win(score_window);
 }
 
 #ifdef DEBUG_MODE

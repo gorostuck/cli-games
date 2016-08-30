@@ -45,8 +45,9 @@
 #define MAX_AMMO AMMO_SCREEN_COLS/2
 
 /* SHOOT */
-#define SHOOT_FAIL 0
-#define SHOOT_OK   1
+#define SHOOT_FAIL  0
+#define SHOOT_OK    1
+#define SHOOT_ENEMY 2
 
 #define STATUS_NONE    (int)' '
 #define STATUS_SHOOTED (int)'x'
@@ -68,5 +69,9 @@
 #define KEY_TUTORIAL   KEY_P
 #define KEY_CLEAN      KEY_U
 #define KEY_ESCAPE     KEY_ESC
+
+/* SCORE_SCREEN */
+#define SCORE_SCREEN_ROWS 4
+#define SCORE_SCREEN_COLS 40
 
 #endif /* DEFINES_H_INCLUDED */
